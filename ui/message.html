@@ -1,0 +1,75 @@
+
+ 
+    <section id="page-header">
+        
+        <h2>#Checkout</h2>
+        <p>Thank you for placing your order, we will deliver it as soon as possible.</p>
+
+
+    </section>
+
+
+    <section class="checkout">
+    <!--    <form id="form1" name="form1"  method="post" action="{{ @BASE }}/simpleform">-->
+
+
+
+      <form id="form1" name="form1" action="{{ @BASE }}/simpleform" method="POST">
+
+          <h3>Place your order</h3>
+  
+          <div class="flex">
+              <div class="inputBox">
+                  <span>Your name :</span>
+                  <input type="text" name="name" placeholder="Enter your name" id="name">
+              </div>
+              <div class="inputBox">
+                <span>Your pet's name :</span>
+                <input type="petname" name="colour" placeholder="Enter your pet's name" id="colour">
+              </div>
+              <div class="inputBox">
+                <span>Your mail address:</span>
+                <input type="text" name="comment" placeholder="eg : asdf@ecopet.com" id="comment">
+            </div>
+              <div class="inputBox">
+                  <span>Your number :</span>
+                  <input type="number" name="number" min="0" placeholder="Enter your number" id="number">
+              </div>
+              <div class="inputBox">
+                  <span>Payment method :</span>
+                  <select name="method"
+                      <option value="paypal">Paypal</option>
+                      <option value="Alipay">Alipay</option>
+                      <option value="credit card">Credit card</option>
+                      <option value="paypal">Paypal</option>
+                  </select>
+              </div>
+              <div class="inputBox">
+                  <span>Address line 01 :</span>
+                  <input type="text" name="address1" placeholder="" id="address1">
+              </div>
+              <div class="inputBox">
+                  <span>Address line 02 :</span>
+                  <input type="text" name="address2" placeholder="" id="address2">
+              </div>
+              <div class="inputBox">
+                  <span>City :</span>
+                  <input type="text" name="city" placeholder="" id="city">
+              </div>
+              <div class="inputBox">
+                  <span>Country :</span>
+                  <input type="text" name="country" placeholder="" id="country">
+              </div>
+              <div class="inputBox">
+                  <span>Postcode :</span>
+                  <input type="text" name="postcode" placeholder="" id="postcode">
+              </div>
+          </div>
+  
+          <input type="submit" name="order" value="send message"  class="btn">
+  
+      </form>
+  
+  </section>
+  
+

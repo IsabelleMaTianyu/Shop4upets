@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+test here
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        shop for your pet
+    </title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+            href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap"
+            rel="stylesheet">
+    <!-- icon link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="ui/css/style.css">
+</head>
+
+<body>
+<!-- header section  -->
+
+<header class="header">
+
+    <a href="index.html" class="logo">
+        <img src="ui/images/ecopetoyslogow.png" alt="">
+    </a>
+
+    <nav class="navbar">
+        <a href="https://drive.google.com/file/d/1Pxz-4JNDJsEhFaf8jqd6n1pAiKblsmc7/view?usp=sharing">report</a>
+        <a href="https://s2046846.edinburgh.domains/shop4urPets/simplequiz">quiz</a>
+        <a href="https://s2046846.edinburgh.domains/shop4urPets/shopbeta2">shop</a>
+        <a href="https://s2046846.edinburgh.domains/shop4urPets/social">pet street</a>
+        <a href="https://s2046846.edinburgh.domains/shop4urPets/about">about</a>
+        <a href="https://s2046846.edinburgh.domains/shop4urPets/cart">cart</a>
+    </nav>
+
+    <div class="icons">
+        <div class="fas fa-search" id="search-btn"></div>
+        <div class="fas fa-shopping-cart" id="cart-btn"></div>
+        <div class="fas fa-user" id="login-btn"></div>
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+
+    <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here...">
+        <label for="search-box" class="fas fa-search"></label>
+    </div>
+
+    <div class="cart-items-container">
+        <div class="cart-item-wrap">
+
+        </div>
+        <!--div class="cart-item">
+            <span class="fas fa-times"></span>
+            <img src="static/images/new1.jpg" alt="">
+            <div class="content">
+                <h3 class="cart-product-title">cart item 01</h3>
+                <div class="price">£15.99/-</div>
+                <input type="number" value="1" class="cart-quntity">
+            </div>
+        </div>
+        <div class="cart-item">
+            <span class="fas fa-times"></span>
+            <img src="static/images/new2.jpg" alt="">
+            <div class="content">
+                <h3 class="cart-product-title">cart item 02</h3>
+                <div class="price">£15.99/-</div>
+                <input type="number" value="1" class="cart-quntity">
+            </div>
+        </div>
+        <div class="cart-item">
+            <span class="fas fa-times"></span>
+            <img src="static/images/new3.jpg" alt="">
+            <div class="content">
+                <h3 class="cart-product-title">cart item 03</h3>
+                <div class="price">£15.99/-</div>
+                <input type="number" value="1" class="cart-quntity">
+            </div>
+        </div>
+        <div class="cart-item">
+            <span class="fas fa-times"></span>
+            <img src="static/images/new4.jpg" alt="">
+            <div class="content">
+                <h3 class="cart-product-title">cart item 04</h3>
+                <div class="price">£15.99/-</div>
+                <input type="number" value="1" class="cart-quntity">
+            </div>
+        </div>-->
+        <div id="cart-bottom">
+            <div class="total">
+                <div class="total-title">Total</div>
+                <div class="total-price">£<span id="total-price"></span></div>
+            </div>
+
+            <a href="#" class="btn">checkout now</a>
+            <a href="cart.html" class="btn">View cart</a>
+        </div>
+    </div>
+
+    <div class="login" id="login">
+
+        <div class="loginbox">
+            <div class="inner-box">
+                <div class="forms-wrap">
+                    <form action="index.html" autocomplete="off" class="sign-in-form">
+                        <div class="heading3">
+                            <h4>SIGN IN</h4>
+                        </div>
+
+                        <div class="heading3">
+                            <h2>Welcome Back</h2>
+                            <h6>Not registred yet?</h6>
+                            <a href="#" class="logbtn">Sign up</a>
+                        </div>
+
+                        <div class="actual-form">
+                            <div class="input-wrap">
+                                <input
+                                        type="text"
+                                        minlength="4"
+                                        class="input-field"
+                                        autocomplete="off"
+                                        required
+                                />
+                                <label class="loglabel">Name</label>
+                            </div>
+
+                            <div class="input-wrap">
+                                <input
+                                        type="password"
+                                        minlength="4"
+                                        class="input-field"
+                                        autocomplete="off"
+                                        required
+                                />
+                                <label class="loglabel">Password</label>
+                            </div>
+
+                            <input type="submit" value="Submit" class="sign-btn" />
+                        </div>
+                    </form>
+
+                    <form action="index.html" autocomplete="off" class="sign-up-form">
+                        <div class="heading3">
+                            <h4>SIGN UP</h4>
+                        </div>
+
+                        <div class="heading3">
+                            <h2>Get Started</h2>
+                            <h6>Already have an account?</h6>
+                            <a href="#" class="logbtn">Sign in</a>
+                        </div>
+
+                        <div class="actual-form">
+                            <div class="input-wrap">
+                                <input
+                                        type="text"
+                                        minlength="4"
+                                        class="input-field"
+                                        autocomplete="off"
+                                        required
+                                />
+                                <label class="loglabel">Name</label>
+                            </div>
+
+                            <div class="input-wrap">
+                                <input
+                                        type="email"
+                                        class="input-field"
+                                        autocomplete="off"
+                                        required
+                                />
+                                <label class="loglabel">Email</label>
+                            </div>
+
+                            <div class="input-wrap">
+                                <input
+                                        type="password"
+                                        minlength="4"
+                                        class="input-field"
+                                        autocomplete="off"
+                                        required
+                                />
+                                <label class="loglabel">Password</label>
+                            </div>
+
+                            <input type="submit" value="Submit" class="sign-btn" />
+                        </div>
+                    </form>
+                </div>
+
+                <div class="carousel">
+                    <div class="images-wrapper">
+                        <img src="https://images.unsplash.com/photo-1599765625239-fe53131a58ee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80" class="image img-1 show" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+<!-- home section -->
+
+
+<section class="container" style="background-image: url(ui/images/home/priscilla-du-preez-qtkpOxCpl0Y-unsplash.jpg);">
+
+    <div class="overlay"></div>
+    <div class="col-5" style="z-index: 97;">
+        <div class="info">
+            <div class="slide-control">
+                <i class='bx bxs-right-arrow'></i>
+            </div>
+            <!-- info 1 -->
+            <div class="product-info">
+                <h1>
+
+                    CAT<span style="color: #c7bdae;">Scratcher</span>
+                </h1>
+                <h1>
+                    <span style="color: #c7bdae;">-house</span>
+                </h1>
+                <span>
+                        Replaceable
+                    </span>
+                <p>
+                    It is a 3d corrugated cardboard replacement scratcher, which can also be used as a cat litter, geometric model.
+                    The interior corrugated board is replaceable, you can buy it on our platform.
+                    It weighs 1.3kg and is suitable for cats of all stage.Made in China #high quality pet products
+
+                </p>
+                <button>
+                    <a href="product9.html">Buy now</a>
+                </button>
+            </div>
+            <!-- end info 1 -->
+            <!-- info 2 -->
+            <div class="product-info">
+                <h1>
+                    <span style="color: #c7bdae;">CAT</span>teaser
+                </h1>
+                <h1>
+                    <span style="color: #c7bdae;">Tumbler</span>
+                </h1>
+                <span>
+                        Electrical
+                    </span>
+                <p>
+                    This product has a non-reversing feature, rotating at an irregular 360 degrees.
+                    The direction of rotation is irregular, the angle of rotation is irregular and the interval is irregular.
+                    It keeps your pet guessing and triggers your cat's hunting instincts.
+                    The soft cotton head is made of environmentally friendly ABS material and is interchangeable with various colours.
+                </p>
+                <button>
+                    <a href="product1.html">Buy now</a>
+                </button>
+            </div>
+            <!-- end info 2 -->
+            <!-- info 3 -->
+            <div class="product-info">
+                <h1>
+                    Dog<span style="color: #c7bdae;">Chewtoy</span>
+                </h1>
+                <h1>
+                    <span style="color: #c7bdae;">Giraffe</span>
+                </h1>
+                <span>
+                        Replaceable
+                    </span>
+                <p>
+                    This toy measures approximately 25cm and comes with a bottle made of recyclable plastic which is hard and unbreakable.
+                    It also makes a sound when the dog bites it.
+                    For your dog's health, we have not used traditional cotton padding to prevent your dog from chewing through the toy and ingesting it.
+                    The outer layer of the bottle is replaceable and there are other replacement packs available in our shop.
+                </p>
+                <button>
+                    <a href="product7.html">Buy now</a>
+                </button>
+            </div>
+            <!-- end info 3 -->
+            <!-- info 4 -->
+            <div class="product-info">
+                <h1>
+                    <span style="color: #c7bdae;">INTER</span>ACtive
+                </h1>
+                <h1>
+                    dog<span style="color: #c7bdae;">toy</span>
+                </h1>
+                <span>
+                        Replaceable
+                    </span>
+                <p>
+                    This toy has replaceable rope with suction cup, customers can hang the toy on different places to let pets have fun themselves.
+                    In addition, the toy has an empty space inside which makes it a leaky feeder, and when pets trying to eat the food inside,
+                    the special design of the toy can help pets clean their teeth.
+                </p>
+                <button>
+                    <a href="product8.html">Buy now</a>
+                </button>
+            </div>
+            <!-- end info 4 -->
+        </div>
+    </div>
+    <div class="col-7">
+        <div class="slider">
+            <div class="slide">
+                <div class="img-holder"
+                     style="background-image: url(ui/images/home/toy1.jpg);"></div>
+            </div>
+            <div class="slide">
+                <div class="img-holder"
+                     style="background-image: url(ui/images/home/toy2.jpg)">
+                </div>
+            </div>
+            <div class="slide">
+                <div class="img-holder"
+                     style="background-image: url(ui/images/home/toy3.jpg)"></div>
+            </div>
+            <div class="slide">
+                <div class="img-holder"
+                     style="background-image: url(ui/images/home/toy4.jpg)"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <h1 class="heading1"> about us <span>why choose us</span> </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="static/images/home/about-img.jpg" alt="">
+        </div>
+
+        <div class="content">
+            <h3 class="title">What's make our shop special!</h3>
+            <p>We are a company that specializes in pet toys and now offer a wide range of replaceable pet toys. The toys shown on this page are supplied with replacements for easily damaged parts of the toy, such as the cardboard in the cat scratchpad and the shell of the dog toy. Most of the products are made from recycled paper and cotton. We also offer personality tests for pets, so that you can get the right product for your pet on our recommendation.
+            </p>
+            <a href="about.html" class="btn">Read more</a>
+            <div class="icons-container">
+                <div class="icons">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Free Shipping</h3>
+                    <h4>Free Shipping for all UK</h4>
+                </div>
+                <div class="icons">
+                    <i class="fas fa-headphones-alt"></i>
+                    <h3>Support 24/7</h3>
+                    <h4>We support 24h a day</h4>
+                </div>
+                <div class="icons">
+                    <i class="fas fa-sync"></i>
+                    <h3>100% Money Back</h3>
+                    <h4>You have 30 days to Return</h4>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<!--test------------------------->
+<section id="banner" class="section-m1">
+    <h2>Take the <span>quiz</span> to find out which toys are best for your pet</h2>
+    <button class="btn"><a href="quiz1.html">Get start</a></button>
+    <div class="image">
+        <img src="static/images/b2.jpg" alt="">
+    </div>
+</section>
+
+<!--new arrivals------------------------->
+
+<section class="products" id="products">
+
+    <h1 class="heading1"> New arrivel <span>quick look</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <img src="ui/images/new/new1.jpg" alt="" class="product-img">
+                <div class="icons1">
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                    <i class="cart-btn" ><a href="product1.html"> See More</a></i>
+                    <i class="fas fa-share"></i>
+                </div>
+            </div>
+            <div class="content">
+                <h3 class = "product-title">Pet Toy Balloon </h3>
+                <div class="price"> £12.99</div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="ui/images/new/new2.jpg" alt="" class="product-img">
+                <div class="icons1">
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                    <i class="cart-btn"><a href="product2.html"> See More</a></i>
+                    <i class="fas fa-share"></i>
+                </div>
+            </div>
+            <div class="content">
+                <h3 class = "product-title">Balloon's Accessory</h3>
+                <div class="price">£5.99</div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="ui/images/new/new3.jpg" alt="" class="product-img">
+                <div class="icons1">
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                    <i class="cart-btn"><a href="product3.html"> See More</a></i>
+                    <i class="fas fa-share"></i>
+                </div>
+            </div>
+            <div class="content">
+                <h3 class = "product-title">Monster Invasion</h3>
+                <div class="price"> £10.99 </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="ui/images/new/new4.jpg" alt="" class="product-img">
+                <div class="icons1">
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                    <i class="cart-btn"><a href="product4.html"> See More</a></i>
+                    <i class="fas fa-share"></i>
+                </div>
+            </div>
+            <div class="content">
+                <h3 class = "product-title">Scratcher Valley</h3>
+                <div class="price"> £5.99</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="ui/images/new/new5.jpg" alt="" class="product-img">
+                <div class="icons1">
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                    <i class="cart-btn"><a href="product5.html"> See More</a></i>
+                    <i class="fas fa-share"></i>
+                </div>
+            </div>
+            <div class="content">
+                <h3 class = "product-title">Scratcher's Accessory</h3>
+                <div class="price"> £5.99</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="ui/images/new/new6.jpg" alt="" class="product-img">
+                <div class="icons1">
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                    <i class="cart-btn"><a href="product6.html"> See More</a></i>
+                    <i class="fas fa-share"></i>
+                </div>
+            </div>
+            <div class="content">
+                <h3 class = "product-title">Chew Toy Tigers</h3>
+                <div class="price"> £9.99</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="ui/images/new/new7.jpg" alt="" class="product-img">
+                <div class="icons1">
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                    <i class="cart-btn"><a href="product7.html"> See More</a></i>
+                    <i class="fas fa-share"></i>
+                </div>
+            </div>
+            <div class="content">
+                <h3 class = "product-title">Chew Toy Giraffe</h3>
+                <div class="price"> £9.99</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="ui/images/new/new8.jpg" alt="" class="product-img">
+                <div class="icons1">
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                    <i class="cart-btn"><a href="product8.html"> See More</a></i>
+                    <i class="fas fa-share"></i>
+                </div>
+            </div>
+            <div class="content">
+                <h3 class = "product-title">Interactive
+                    Dog Toy</h3>
+                <div class="price"> £15.99</span> </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!--footer------------------------->
+<footer class="section-p1">
+        <div class="col">
+            <a href="https://s2046846.edinburgh.domains/shop4urPets/" class="logo">
+                <img src="ui/images/ecopetoyslogow.png" alt="">
+        <h4>Contact</h4>
+        <p><strong>Address: </strong> 74 Lauriston Place Edinburgh
+            EH3 9DF
+            Scotland</p>
+        <p><strong>Phone:</strong> +44 131 651 5800</p>
+        <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+        <div class="follow">
+            <h4>Follow Us</h4>
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <h4>About</h4>
+        <a href="https://s2046846.edinburgh.domains/shop4urPets/about">About Us</a>
+        <a href="https://s2046846.edinburgh.domains/shop4urPets/">Review</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Contact Us</a>
+    </div>
+
+    <div class="col">
+        <h4>My Account</h4>
+        <a href="https://s2046846.edinburgh.domains/shop4urPets/cart">View Cart</a>
+        <a href="#">View address</a>
+    </div>
+
+    <div class="col install">
+        <h4>Install App</h4>
+        <p>From App Store or Google Play</p>
+        <div class="row">
+            <img src="ui/images/app.jpg" alt="">
+            <img src="ui/images/play.jpg" alt="">
+        </div>
+        <p>Secured Payment Gateways </p>
+        <img src="ui/images/pay.png" alt="">
+    </div>
+
+    <div class="copyright">
+        <p>© 2021 ecopetoys - Tianyu Ma / Tianhao Jin</p>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="ui/js/main.js"></script>
+<script src="ui/js/login.js"></script>
+<script src="ui/js/cart.js"></script>
+
+</body>
+</html>

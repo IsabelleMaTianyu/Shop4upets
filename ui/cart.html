@@ -1,0 +1,159 @@
+
+
+    <section id="page-header">
+
+        <h2>#cart</h2>
+
+        <p>Fast, safe and efficient</p>
+
+    </section>
+
+
+    <section id="cart" class="section-p1">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+
+            <tbody id="cartbody">
+                <!-- <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="./static/images/new1.jpg" alt=""></td>
+                    <td>pets toy</td>
+                    <td>£15.99</td>
+                    <td><input type="number" value="1" name="" id=""></td>
+                    <td>£15.99</td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="./static/images/new1.jpg" alt=""></td>
+                    <td>pets toy</td>
+                    <td>£15.99</td>
+                    <td><input type="number" value="1" name="" id=""></td>
+                    <td>£15.99</td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="./static/images/new1.jpg" alt=""></td>
+                    <td>pets toy</td>
+                    <td>£15.99</td>
+                    <td><input type="number" value="1" name="" id=""></td>
+                    <td>£15.99</td>
+                </tr> -->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="cart-add" class="section-p1">
+        <div id="cuopon">
+            <h3>Apply Coupon</h3>
+            <div>
+                <input type="text" name="" id="" placeholder="Enter Your Coupon">
+                <button class="btn">Apply</button>
+            </div>
+        </div>
+
+        <div id="subtotal">
+            <h3>Cart Totals</h3>
+            <table>
+                <tr>
+                    <td>Cart Subtotal</td>
+                    <td>£ <span class="total-price">0</span></td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><strong>£ <span class="total-price">0</span></strong></td>
+                </tr>
+            </table>
+            <a href="https://s2046846.edinburgh.domains/shop4urPets/simpleform" class="btn">Proceed to checkout</a>
+        </div>
+    </section>
+
+
+
+
+<script>
+
+
+    $(function () {
+        var cartList;
+
+        const renderTotalPrice = () => {
+
+            let total = 0
+            cartList.forEach((item) => {
+                total += item.price * item.num
+            })
+            $(".total-price").text(total)
+        }
+
+        function renderCart() {
+            cartList = localStorage.getItem('cartList')
+            if (cartList) cartList = JSON.parse(cartList)
+            var cartHtml = ''
+            if (cartList && cartList.length > 0) {
+                cartList.forEach(item => {
+                    cartHtml += `<tr>
+                        <td><a href="#"><i class="far fa-times-circle" data-index="${item.id}"></i></a></td>
+                        <td><img src="${item.img}" alt=""></td>
+                        <td>${item.name}</td>
+                        <td>£${item.price}</td>
+                        <td><input  data-index="${item.id}" type="number" class="num-input" value="${item.num}" name="" id=""></td>
+                        <td>£${item.price}</td>
+                    </tr>`
+                })
+                $('#cartbody').append(cartHtml)
+
+            } else {
+                $('#cartbody').append('')
+            }
+            renderTotalPrice()
+        }
+        renderCart()
+        $("#cart").on("click", '.fa-times-circle', function () {
+            const id = $(this).data("index")
+            const index = cartList.map(item => item.id).indexOf(id)
+            if (index > -1) {
+                cartList.splice(index, 1)
+                localStorage.setItem('cartList', JSON.stringify(cartList))
+                renderCart()
+            }
+        });
+
+
+        $("#cart").on("change", '.num-input', function () {
+            const value = $(this).val()
+            if (value > 0) {
+                const id = $(this).data("index")
+                cartList = cartList.map((item) => {
+                    if (item.id == id) {
+                        return {
+                            ...item,
+                            num: parseInt(value)
+                        }
+                    } else {
+                        return item
+                    }
+                })
+                localStorage.setItem('cartList', JSON.stringify(cartList))
+                renderTotalPrice()
+            } else {
+                alert('数量不能为0')
+                $(this).val(1)
+            }
+
+        });
+    
+    })
+</script>

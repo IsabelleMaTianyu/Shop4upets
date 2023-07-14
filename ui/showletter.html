@@ -1,0 +1,31 @@
+
+
+    <section id="page-header">
+        
+        <h2>#Checkout</h2>
+        <p>Thank you for placing your order, we will deliver it as soon as possible.</p>
+
+
+    </section>
+    <section class="letter2"><h1 class="heading1">Congratulations<span>View your letter below</span></h1></section>
+    
+    <section class="letter">
+      
+      <div class="wrapper">
+        <div class="lid one"></div>
+        <div class="lid two"></div>
+        <div class="envelope"></div>
+        <div class="letter1">
+          <p> Hello {{ @dbData[0].colour }}!</p>
+          <p>This is a gift from {{ @dbData[0].name }}, we will deliver it soon.</p>
+          <p>Your email is  {{ @dbData[0].comment }}.</p>
+          <p>Your address is :{{ @dbData[0].address1 }},</p>
+          <p>  {{ @dbData[0].address2 }}</p>
+          <p> {{ @dbData[0].city }}, {{ @dbData[0].postcode }} </p>
+          <p> {{ @dbData[0].country }}.</p>
+        </div>
+      </div>
+    </section>
+
+
+

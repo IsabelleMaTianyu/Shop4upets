@@ -1,0 +1,26 @@
+
+ 
+    <section id="page-header">
+        
+        <h2>#Pet Street</h2>
+
+        <p>Look at other people's stories.</p>
+<div class="">
+        <button class="btn" > <a href="javascript:;" class="checkLogin" data-url="https://s2046846.edinburgh.domains/shop4urPets/addpic">Upload</a></button>
+</div>
+    </section>
+    <section>
+
+
+        <div class="container1">
+        <repeat group="{{ @datalist }}" value="{{ @item }}">
+
+            <div class="item1" id="imgdisplay" >
+                <img src="{{ @BASE }}/image/{{ @item.id }}" >
+                <h1 class="name2">{{ @item.title }}</h1>
+                <p class="name1">{{ @item.price }}</p>
+            </div>
+
+        </repeat>
+        </div>
+    </section>

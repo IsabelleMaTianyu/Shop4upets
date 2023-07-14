@@ -1,0 +1,21 @@
+<h2>Simple Quiz</h2>
+
+<form method="post" action="{{@BASE}}/simplequiz">
+	<table>
+		<repeat group="{{ @dbData }}" value="{{ @record }}" counter="{{ @qnum }}">
+			<tr>
+				<td>{{ @qnum }}</td>
+				<td><img src="{{ trim(@record.image) }}" style="width:150px"></td>
+				<td>{{ trim(@record.question) }}</td>
+				<td><input type="radio" value="1" name="q{{@qnum}}" id="a1"><label for="a1">{{ trim(@record.a1) }}</label></td>
+				<td><input type="radio" value="2" name="q{{@qnum}}" id="a2"><label for="a2">{{ trim(@record.a2) }}</label></td>
+				<td><input type="radio" value="3" name="q{{@qnum}}" id="a3"><label for="a3">{{ trim(@record.a3) }}</label></td>
+				<td><input type="radio" value="4" name="q{{@qnum}}" id="a4"><label for="a4">{{ trim(@record.a4) }}</label></td>
+			</tr>
+		</repeat>
+	</table>
+	<button type="submit">Submit</button>
+	<p><a href="simplequizHome">Home</a></p>
+</form>
+
+

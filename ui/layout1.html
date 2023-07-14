@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>
+      shop for your pet
+   </title>
+   <script src="ui/js/product/swiper.min.js"></script>
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap" rel="stylesheet">
+   <!-- icon link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+   <link rel="stylesheet" href="ui/css/product.css">
+   <link  rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+
+</head>
+
+   <body>
+   <include href="{{ @header }}" />
+   <include href="{{ @content }}" />
+   <include href="{{ @footer }}" />
+
+
+
+   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+   <script src="ui/js/product.js"></script>
+   <script src="ui/js/cart.js"></script>
+   <script src="ui/js/logintest.js"></script>
+   <script type="text/javascript">
+
+      var mySwiper = new Swiper ('.box-container', {
+         loop: true, // 循环模式选项
+         slidesPerView : '5',
+         //spaceBetween : 20,
+         // 如果需要前进后退按钮
+         navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+         },
+
+         breakpoints: {
+            320: {  //当屏幕宽度大于等于320
+               slidesPerView: 1
+               //spaceBetween: 10
+            },
+            768: {  //当屏幕宽度大于等于768
+               slidesPerView: 3
+               //spaceBetween: 20
+            },
+            1280: {  //当屏幕宽度大于等于1280
+               slidesPerView: 3
+               //spaceBetween: 30
+            },
+            1440: {  //当屏幕宽度大于等于1280
+               slidesPerView: 4
+               //spaceBetween: 30
+            },
+            1680: {  //当屏幕宽度大于等于1280
+               slidesPerView: 5
+               //spaceBetween: 30
+            }
+
+         }
+
+      })
+   </script>
+
+   </body>
+</html>

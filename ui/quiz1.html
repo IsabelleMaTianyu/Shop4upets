@@ -1,0 +1,42 @@
+
+ 
+    <section id="page-header">
+
+        <h2>#Quiz</h2>
+
+        <p>Every pet has their own personality </p>
+        <p>Take the quiz to find out which toys are best for your pet </p>
+
+    </section>
+    <section id="quiz" class="section" method="post" action="{{@BASE}}/simplequiz">
+
+
+        <div class="quizbox">
+
+
+        <table class=quizform"width="100%">
+            <form method="post" action="{{@BASE}}/simplequiz">
+            <repeat group="{{ @dbData }}" value="{{ @record }}" counter="{{ @qnum }}">
+                <thead>
+                <tr>
+                    <td>{{ trim(@record.question) }}</td>
+                </tr>
+                </thead><tbody>
+                <tr>
+                <td><input type="radio" value="1" name="q{{@qnum}}" id="a1"><label for="a1">{{ trim(@record.a1) }}</label></td>
+				<td><input type="radio" value="2" name="q{{@qnum}}" id="a2"><label for="a2">{{ trim(@record.a2) }}</label></td>
+				<td><input type="radio" value="3" name="q{{@qnum}}" id="a3"><label for="a3">{{ trim(@record.a3) }}</label></td>
+				<td><input type="radio" value="4" name="q{{@qnum}}" id="a4"><label for="a4">{{ trim(@record.a4) }}</label></td>
+                </tr>
+            </tbody>
+            </repeat>
+            </table>
+
+        </div>
+            <button type="submit" class="btn btn5">Submit</button>
+
+        </form>
+    </section>
+
+
+ <!--   <tbody id="cartbody">-->

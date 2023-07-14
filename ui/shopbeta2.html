@@ -1,0 +1,80 @@
+
+
+    <section id="page-header">
+
+        <h2>#Shop for your pets</h2>
+
+        <p>To get a suitable gift for your pet, you can do a quiz here!</p>
+        <div class="">
+            <a href="https://s2046846.edinburgh.domains/shop4urPets/simplequiz">  <button class="btn" >Quiz</button></a>
+        </div>
+
+    </section>
+
+
+    <section class="products" id="products">
+
+
+        <ul class="products__filters">
+            <a style="display: block;" href='?cate=1'>
+                <li class="products__item products__line" data-filter=".cat">
+                    <h1 class="heading1"> Cat <span>5 products</span> </h1>
+                </li>
+            </a>
+
+            <a style="display: block;" href='?cate=2'>
+                <li class="products__item products__line" data-filter=".dog">
+                    <h1 class="heading1"> Dog <span>4 products</span> </h1>
+                </li>
+            </a>
+
+            <a style="display: block;" href='?cate=3'>
+                <li class="products__item" data-filter=".sell">
+                    <h1 class="heading1"> SELL <span>3 products</span> </h1>
+                </li>
+            </a>
+        </ul>
+<!--        {{ @id5.price}}-->
+
+
+
+        <div class="box-container">
+            <repeat group="{{ @datalist }}" value="{{ @item }}">
+            <article class="box mix cat active">
+                <div class="image">
+                    <a href="{{ @BASE }}/product/{{ @item.id }}"><img src="{{ @BASE }}/thumb/{{ @item.id }}" alt="" class="product-img"></a>
+                    <div class="icons1">
+                        <i class="fas fa-shopping-cart add-cart"></i>
+                        <i class="cart-btn"><a href="{{ @BASE }}/product/{{ @item.id }}"> See More</a></i>
+                        <i id="share_button" type="button" class="fas fa-share"/></i>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3 class = "product-title">{{ @item.title }} </h3>
+                    <div class="price"> <p>{{ @item.price }}</p></div>
+                </div>
+            </article>
+         </repeat>
+
+<!--            <article class="box mix cat">-->
+<!--                <div class="image">-->
+<!--                    <img src="ui/images/new/new2.jpg" alt="" class="product-img">-->
+<!--                    <div class="icons1">-->
+<!--                        <i class="fas fa-shopping-cart add-cart"></i>-->
+<!--                        <i class="cart-btn"><a href="product2.html"> See More</a></i>-->
+<!--                        <i id="share_button" type="button" class="fas fa-share"/></i>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="content">-->
+<!--                    <h3 class = "product-title">Balloon's Accessory</h3>-->
+<!--                    <div class="price">£5.99</div>-->
+<!--                </div>-->
+<!--            </article>-->
+
+
+
+
+        </div>
+
+    </section>
+
